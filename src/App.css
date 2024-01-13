@@ -1,0 +1,59 @@
+/* App css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 54px;
+  background: #6b502a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar>span {
+  color: #ffffff;
+  font-size: 28px;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.navbar>ul {
+  display: flex;
+  gap: 32px;
+  padding: 0 30px;
+  list-style-type: none;
+}
+
+.navbar>ul>li {
+  cursor: pointer;
+  color: #ffffff;
+  padding: 5px;
+}
+
+.navbar>ul>li:hover {
+  color: #6b502a;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 64px 0;
+  height: calc(100% - 64px);
+  overflow: hidden scroll;
+}
+
+.profile {
+  width: 240px;
+  padding: 8px;
+  margin: 5px;
+  color: #ffffff;
+  background: #6b502a;
+  text-align: center;
+}
