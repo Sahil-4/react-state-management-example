@@ -1,17 +1,19 @@
+import { useDispatch } from "react-redux";
+import { updateFunction } from "../Store/Slices/usersSlice";
 
-function Navbar({ updateFunction }) {
-  // updateFunction needs type : All, Basic, Gold, Student, Premium 
+function Navbar() {
+  const dispatch = useDispatch();
 
   return (
     <div className="navbar">
       <span>React State Management Tutorial</span>
 
       <ul>
-        <li onClick={() => updateFunction("All")}>All</li>
-        <li onClick={() => updateFunction("Basic")}>Basic Plan</li>
-        <li onClick={() => updateFunction("Gold")}>Gold Plan</li>
-        <li onClick={() => updateFunction("Student")}>Student Plan</li>
-        <li onClick={() => updateFunction("Premium")}>Premium Plan</li>
+        <li onClick={() => dispatch(updateFunction("All"))}>All</li>
+        <li onClick={() => dispatch(updateFunction("Basic"))}>Basic Plan</li>
+        <li onClick={() => dispatch(updateFunction("Gold"))}>Gold Plan</li>
+        <li onClick={() => dispatch(updateFunction("Student"))}>Student Plan</li>
+        <li onClick={() => dispatch(updateFunction("Premium"))}>Premium Plan</li>
       </ul>
     </div>
   );

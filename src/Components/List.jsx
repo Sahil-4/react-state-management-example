@@ -1,8 +1,13 @@
 import Profile from "./Profile";
 import avatar from "../assets/profile.png";
+import { useSelector } from "react-redux";
 
 // Component to display a list of user profiles
-function List({ users }) {
+function List() {
+  const users = useSelector((state) => state.users.result);
+
+  // lets now check the output 
+
   return (
     <div className="container profiles">
       {users.map((user) => (
@@ -21,3 +26,6 @@ function List({ users }) {
 }
 
 export default List;
+
+
+// done 
